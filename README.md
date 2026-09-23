@@ -1,3 +1,4 @@
+[Telegram Bot](https://t.me/Testtgshablon_bot)
 AqylQor — AI-Powered Inventory Management System
 AqylQor is an AI-powered system designed to monitor inventory, forecast demand, and calculate replenishment orders for suppliers. Its goal is to simplify stock management, reduce shortages and excess inventory, and help businesses make purchasing decisions based on data.
 The platform will be a responsive website that works comfortably on both mobile phones and laptops. A clear interface will give users quick access to essential information and everyday tasks.
