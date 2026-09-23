@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: arna-logistics
+    runtime: docker
+    plan: free
+    healthCheckPath: /health/live
+    preDeployCommand: alembic upgrade head
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips="*"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "*.onrender.com"
+      - key: RENDER_EXTERNAL_URL
+        sync: false
+      - key: TRUSTED_ORIGINS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        sync: false
+      - key: TELEGRAM_BOT_URL
+        sync: false
